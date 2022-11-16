@@ -1,0 +1,51 @@
+.list {
+    width: 100%;
+    list-style: none;
+    padding: 20px;
+}
+
+.list__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-auto-rows: minmax(40px, auto);
+    align-items: center;
+    border-bottom: 1px solid #dad5d5;
+    padding: 10px 0px;
+    visibility: visible;
+}
+
+.list__item--hidden {
+    display: none;
+}
+
+.list__taskText {
+    margin: 0px 10px;
+}
+
+.list__taskText--done {
+    text-decoration: line-through;
+}
+
+.list__icon {
+    width: 30px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.list__icon--green {
+    background-color: hsl(120, 50%, 41%);
+}
+
+.list__icon--green:hover {
+    background-color: hsl(120, 36%, 47%);
+}
+
+.list__icon--red {
+    background-color: rgb(199, 26, 26)
+}
+
+.list__icon--red:hover {
+    background-color: hsl(0, 49%, 50%)
+}
