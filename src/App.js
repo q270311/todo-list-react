@@ -5,7 +5,7 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
-const tasksTable = [
+const tasks = [
   { id: 1, content: "zadanie 1", done: false },
   { id: 2, content: "zadanie 2", done: true },
   { id: 3, content: "zadanie 3", done: false },
@@ -23,8 +23,8 @@ function App() {
         />
         <Section
           title="Lista zadań"
-          extraHeaderContent={<Buttons tasks={tasksTable} hideDoneTasks={hideDoneTasks} />}
-          body={<Tasks tasks={tasksTable} hideDoneTasks={hideDoneTasks} />}
+          extraHeaderContent={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+          body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
         />
       </Container>
     </div>
