@@ -8,8 +8,9 @@ const Buttons = (props) => (
                 <button
                     type="button"
                     className="buttons__button"
+                    onClick={props.toggleHideDone}
                 >
-                    {props.hideDoneTask ? "Pokaż" : "Ukryj"} ukończone
+                    {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
                 </button>
                 <button
                     type="button"
