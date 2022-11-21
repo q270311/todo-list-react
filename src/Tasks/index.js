@@ -7,7 +7,7 @@ const Tasks = (props) => (
             key={task.id}
             className={`list__item ${task.done && props.hideDone ? "list__item--hidden" : ""}`}
          >
-            <button className="list__icon list__icon--green">
+            <button className="list__icon list__icon--green" onClick={() => props.toggleTaskDone(task.id)}>
                {task.done ? "✔" : ""}
             </button>
             <span className={`list__taskText ${task.done ? " list__taskText--done" : ""}`}>

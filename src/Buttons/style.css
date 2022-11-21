@@ -25,5 +25,6 @@
 }
 
 .buttons:disabled {
-    color: #d4d0d0;
+    transition: color 1.5s;
+    color: #cecccc;
 }
