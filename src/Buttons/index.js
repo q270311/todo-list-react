@@ -6,16 +6,15 @@ const Buttons = (props) => (
         <div className="buttons__container">
             <Fragment>
                 <button
-                    type="button"
                     className="buttons__button"
                     onClick={props.toggleHideDone}
                 >
                     {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
                 </button>
                 <button
-                    type="button"
                     className="buttons__button"
                     disabled={props.tasks.every(({ done }) => done)}
+                    onClick={props.setAllDone}
                 >
                     Ukończ wszystkie
                 </button>

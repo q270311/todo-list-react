@@ -24,7 +24,6 @@
     color: #cecccc;
 }
 
-.buttons:disabled {
-    transition: color 1.5s;
+.buttons__button:disabled {
     color: #cecccc;
 }
