@@ -13,7 +13,7 @@ const Tasks = (props) => (
             <span className={`list__taskText ${task.done ? " list__taskText--done" : ""}`}>
                {task.content}
             </span>
-            <button className="list__icon list__icon--red">🗑</button>
+            <button className="list__icon list__icon--red" onClick={() => props.removeTask(task.id)} >🗑</button>
          </li>
       ))}
    </ul >
