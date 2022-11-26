@@ -32,6 +32,7 @@ function App() {
       { ...task, done: true, }
     )));
   }
+
   const addNewTask = (content) => {
     setTasks(tasks => [
       ...tasks,
@@ -58,7 +59,6 @@ function App() {
         />
       </Container>
     </div>
-
   );
 }
 
