@@ -7,10 +7,9 @@ import Header from "./Header";
 import Container from "./Container";
 
 function App() {
-  const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
-  ]);
-
+  const [hideDone, setHideDone] = useState(localStorage.getItem("hideDone") ? localStorage.getItem("hideDone") : false);
+  const [tasks, setTasks] = useState(localStorage.getItem("tasks") ? localStorage.getItem("tasks") : [ ]);
+ 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
@@ -26,13 +25,11 @@ function App() {
       return task;
     }));
   }
-
   const setAllDone = () => {
     setTasks(tasks => tasks.map(task => (
       { ...task, done: true, }
     )));
   }
-
   const addNewTask = (content) => {
     setTasks(tasks => [
       ...tasks,
