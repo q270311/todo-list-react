@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
 
+const tasksFromLocalStorage = () => {
+    return (localStorage.getItem("tasks") ? JSON.parse(localStorage.getItem("tasks")) : []);
+};
+
 export const useTasks = () => {
-    const [tasks, setTasks] = useState(localStorage.getItem("tasks") ? JSON.parse(localStorage.getItem("tasks")) : []);
+    const [tasks, setTasks] = useState(tasksFromLocalStorage);
 
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }, [tasks]);
 
-    
+
     const removeTask = (id) => {
         setTasks(tasks => tasks.filter(tasks => tasks.id !== id));
     }
@@ -37,10 +41,10 @@ export const useTasks = () => {
     }
 
     return {
-        tasks:tasks,
-        removeTask:removeTask,
-        toggleTaskDone:toggleTaskDone,
-        setAllDone:setAllDone,
-        addNewTask:addNewTask,
+        tasks: tasks,
+        removeTask: removeTask,
+        toggleTaskDone: toggleTaskDone,
+        setAllDone: setAllDone,
+        addNewTask: addNewTask,
     }
 }
