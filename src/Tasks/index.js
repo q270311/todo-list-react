@@ -19,7 +19,9 @@ const Tasks = (props) => (
             <Button 
                remove
                onClick={() => props.removeTask(task.id)} 
-            >🗑</Button>
+            >
+               🗑
+            </Button>
          </Item>
       ))}
    </List>

@@ -19,6 +19,7 @@ export const Item = styled.li`
         display: none;
     `};
 `;
+
 export const Content = styled.span`
     margin: 0px 10px;
 

@@ -3,8 +3,8 @@ import { NewTaskForm, InputText } from "./styled";
 
 const Form = ({ addNewTask }) => {
     const inputTextRef = useRef(null);
-
     const [newTaskContent, setNewTaskContent] = useState("");
+    
     const onFormSubmit = (event) => {
         event.preventDefault();
         const trimmedNewTaskContent = newTaskContent.trim()
