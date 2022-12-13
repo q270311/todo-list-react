@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import Form from "./Form";
 import TaskList from "./TaskList";
 import Buttons from "./Buttons";
@@ -8,7 +8,7 @@ import Container from "../../common/Container";
 import { useTasks } from "./TaskList/useTasks";
 
 function Tasks() {
-  const [hideDone, setHideDone] = useState(localStorage.getItem("hideDone") ? JSON.parse(localStorage.getItem("hideDone")) : false);
+/*   const [hideDone, setHideDone] = useState(localStorage.getItem("hideDone") ? JSON.parse(localStorage.getItem("hideDone")) : false);
 
   useEffect(() => {
     localStorage.setItem("hideDone", hideDone);
@@ -16,28 +16,29 @@ function Tasks() {
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
-  };
-  
+  }; */
+
   const {
-    tasks,
+    //tasks,
     removeTask,
     toggleTaskDone,
     setAllDone,
-    addNewTask,
+    //addNewTask,
   } = useTasks();
 
+ 
   return (
     <div className="App">
       <Container>
         <Header title="Lista zadań" />
         <Section
           title="Dodaj nowe zadanie"
-          body={<Form addNewTask={addNewTask} />}
+          body={<Form />}
         />
         <Section
           title="Lista zadań"
-          extraHeaderContent={<Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setAllDone={setAllDone} />}
-          body={<TaskList tasks={tasks} hideDone={hideDone} removeTask={removeTask} toggleTaskDone={toggleTaskDone} />}
+          extraHeaderContent={<Buttons  setAllDone={setAllDone} />}
+          body={<TaskList removeTask={removeTask} toggleTaskDone={toggleTaskDone} />}
         />
       </Container>
     </div>

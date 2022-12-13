@@ -29,7 +29,7 @@ export const useTasks = () => {
             { ...task, done: true, }
         )));
     }
-    const addNewTask = (content) => {
+/*     const addNewTask = (content) => {
         setTasks(tasks => [
             ...tasks,
             {
@@ -38,13 +38,13 @@ export const useTasks = () => {
                 id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
             }
         ]);
-    }
+    } */
 
     return {
-        tasks: tasks,
+        //tasks: tasks,
         removeTask: removeTask,
         toggleTaskDone: toggleTaskDone,
         setAllDone: setAllDone,
-        addNewTask: addNewTask,
+        // addNewTask: addNewTask,
     }
 }
