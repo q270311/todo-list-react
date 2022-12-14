@@ -19,6 +19,7 @@ Each of the tasks can be removed from the board at any time by clicking the tras
  - ES6+ features
  - React.js
  - React Hooks: useState, useEffect, useRef, own Reaact Hooks
+ - Redux
  - Styled components
 ## Available Scripts
 
