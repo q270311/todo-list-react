@@ -27,4 +27,14 @@ const Buttons = () => {
     )
 };
 
+export const DownloadExampleTasksButton = () => {
+    return (
+        <ButtonsContainer>
+                <Button onClick={null} >
+                    Pobierz przykładowe zadania
+                </Button>
+        </ButtonsContainer>
+    );
+}
+
 export default Buttons;
