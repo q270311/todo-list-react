@@ -10,6 +10,7 @@ export const Title = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    margin-top: 5px;
     font-size: 20px;
     font-weight: 700;
     border-bottom: 1px solid rgb(218, 213, 213);
