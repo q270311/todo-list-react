@@ -34,7 +34,7 @@ const Form = () => {
                 autoFocus
                 placeholder="Co jest do zrobienia?"
                 className="form__text"
-                onChange={({ target }) => setNewTaskContent(target.value.trim())}
+                onChange={({ target }) => setNewTaskContent(target.value)}
             />
             <InputText
                 type="submit"
