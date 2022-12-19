@@ -6,6 +6,7 @@ const tasksSlice = createSlice({
     initialState: {
         tasks: getTasksFronLocalStorage(),
         hideDone: false,
+        fetchExampleTasksStatus: "Pobierz przykładowe zadania",
     },
     reducers: {
         addTask: ({ tasks }, { payload }) => {
@@ -27,10 +28,12 @@ const tasksSlice = createSlice({
                 task.done = true;
             });
         },
-        fetchExampleTasks: () => {
+        fetchExampleTasks: state => {
+            state.fetchExampleTasksStatus="Loading...";
         },
         setTasks: (state, { payload }) => {
             state.tasks = payload;
+            state.fetchExampleTasksStatus="Pobierz przykładowe zadania";
         },
     },
 });
@@ -49,4 +52,5 @@ export const selectTasksState = state =>state.tasks;
 
 export const selectTasks = (state) => selectTasksState(state).tasks;
 export const selectHideDone = (state) => selectTasksState(state).hideDone;
+export const selectFetchExampleTasksStatus = (state) => selectTasksState(state).fetchExampleTasksStatus;
 export default tasksSlice.reducer;

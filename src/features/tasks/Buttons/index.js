@@ -1,6 +1,13 @@
 import { Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTasks, selectHideDone, toggleHideDone, setAllDone, fetchExampleTasks } from "../tasksSlice";
+import { 
+    selectTasks, 
+    selectHideDone, 
+    selectFetchExampleTasksStatus,
+    toggleHideDone, 
+    setAllDone, 
+    fetchExampleTasks     
+} from "../tasksSlice";
 import { ButtonsContainer, Button } from "./styled";
 
 export const ManageTasksButtons = () => {
@@ -28,11 +35,15 @@ export const ManageTasksButtons = () => {
 };
 
 export const ExampleTasksButton = () => {
+    const fetchExampleTasksStatus = useSelector(selectFetchExampleTasksStatus);
     const dispatch = useDispatch();
     return (
         <ButtonsContainer>
-            <Button onClick={() => dispatch(fetchExampleTasks())} >
-                Pobierz przykładowe zadania
+            <Button 
+                onClick={() => dispatch(fetchExampleTasks())} 
+                disabled={fetchExampleTasksStatus === "Loading..."}
+            >
+                {fetchExampleTasksStatus}
             </Button>
         </ButtonsContainer>
     );
