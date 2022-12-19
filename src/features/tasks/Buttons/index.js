@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectTasks, selectHideDone, toggleHideDone, setAllDone, fetchExampleTasks } from "../tasksSlice";
 import { ButtonsContainer, Button } from "./styled";
 
-const Buttons = () => {
-    const { tasks } = useSelector(selectTasks);
+export const ManageTasksButtons = () => {
+    const tasks = useSelector(selectTasks);
     const hideDone = useSelector(selectHideDone);
     const dispatch = useDispatch();
 
@@ -27,7 +27,7 @@ const Buttons = () => {
     )
 };
 
-export const DownloadExampleTasksButton = () => {
+export const ExampleTasksButton = () => {
     const dispatch = useDispatch();
     return (
         <ButtonsContainer>
@@ -38,4 +38,3 @@ export const DownloadExampleTasksButton = () => {
     );
 }
 
-export default Buttons;
