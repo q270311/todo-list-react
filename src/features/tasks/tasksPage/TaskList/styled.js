@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const List = styled.ul`
     width: 100%;
     list-style: none;
-    padding: 20px;
+    padding:0px;
 `;
 
 export const Item = styled.li`

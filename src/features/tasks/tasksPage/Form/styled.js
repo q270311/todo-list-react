@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const NewTaskForm = styled.form`
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding-top: 10px;
 
     @media (max-width: 767px) {    
         display: flex;
@@ -17,7 +17,6 @@ export const InputText = styled.input`
         height: 40px;
         margin-right: 20px;
         border: 2px solid #dad5d5;
-        padding-left: 10px;
 
         @media (max-width: 767px) {    
             width: 100%;

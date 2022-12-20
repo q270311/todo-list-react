@@ -29,11 +29,11 @@ const tasksSlice = createSlice({
             });
         },
         fetchExampleTasks: state => {
-            state.fetchExampleTasksStatus="Loading...";
+            state.fetchExampleTasksStatus = "Loading...";
         },
         setTasks: (state, { payload }) => {
             state.tasks = payload;
-            state.fetchExampleTasksStatus="Pobierz przykładowe zadania";
+            state.fetchExampleTasksStatus = "Pobierz przykładowe zadania";
         },
     },
 });
@@ -48,9 +48,12 @@ export const {
     setTasks
 } = tasksSlice.actions;
 
-export const selectTasksState = state =>state.tasks;
+export const selectTasksState = state => state.tasks;
 
 export const selectTasks = (state) => selectTasksState(state).tasks;
 export const selectHideDone = (state) => selectTasksState(state).hideDone;
 export const selectFetchExampleTasksStatus = (state) => selectTasksState(state).fetchExampleTasksStatus;
+export const getTaskByID = (state, taskID) =>
+    selectTasks(state).find(({ id }) => id === taskID);
+
 export default tasksSlice.reducer;
