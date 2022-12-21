@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 
 export const Nav = styled.nav`
@@ -22,14 +22,16 @@ export const Ul = styled.ul`
 export const Li = styled.li`
     margin: 0px 20px;
 `;
-
-export const StyledActiveLink = styled(NavLink)`
+const activeClassName = "activeLink";
+export const StyledActiveLink = styled(NavLink).attrs(()=>({
+    activeClassName,
+}))`
     color: white;
     text-decoration: none;
 
-    ${({ activeClassName }) => activeClassName === "activeLink" && css`
+    &${activeClassName}{
         font-weight: bold;
-    `};
+    };
 
     &:hover{
         font-weight: bold;

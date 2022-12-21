@@ -10,10 +10,10 @@ const App = () => (
         <Nav>
             <Ul>
                 <Li>
-                    <StyledActiveLink activeClassName="activLink" to="/zadania"> zadania </StyledActiveLink>
+                    <StyledActiveLink to="/zadania"> zadania </StyledActiveLink>
                 </Li>
                 <Li>
-                    <StyledActiveLink activeClassName="activLink" to="/autor"> o autorze </StyledActiveLink>
+                    <StyledActiveLink to="/autor"> o autorze </StyledActiveLink>
                 </Li>
             </Ul>
             </Nav>
