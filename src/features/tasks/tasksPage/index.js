@@ -1,5 +1,6 @@
 import Form from "./Form";
 import TaskList from "./TaskList";
+import Search from "./Search"
 import {ManageTasksButtons, ExampleTasksButton} from "./Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
@@ -14,6 +15,10 @@ const  TasksPage = () =>{
           extraHeaderContent={<ExampleTasksButton />}
           body={<Form />}
         />
+        <Section
+          title="Wyszukiwarka"
+          body={<Search />}
+        /> 
         <Section
           title="Lista zadań"
           extraHeaderContent={<ManageTasksButtons />}
