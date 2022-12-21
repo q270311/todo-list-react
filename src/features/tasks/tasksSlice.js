@@ -55,5 +55,13 @@ export const selectHideDone = (state) => selectTasksState(state).hideDone;
 export const selectFetchExampleTasksStatus = (state) => selectTasksState(state).fetchExampleTasksStatus;
 export const getTaskByID = (state, taskID) =>
     selectTasks(state).find(({ id }) => id === taskID);
+export const selectTasksByQuery = (state, query) => {
+    const tasks = selectTasks(state);
+    if (!query || query.trim() === "") {
+        return tasks;
+    }
+    return tasks.filter(({ content }) => content.toUpperCase().includes(query.toUpperCase()));
+}
+
 
 export default tasksSlice.reducer;
