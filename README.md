@@ -6,9 +6,19 @@ https://q270311.github.io/todo-list-react/
 ## Description 
 Project implemented during the _Frontend Developer od podstaw_ course at the **YouCode** -  online programming school.
 
-The web application allows you, to save tasks to be done soon on the board. They can also be words to be learned in another language for example.
-The green button allows you to mark the task as completed.
-Each of the tasks can be removed from the board at any time by clicking the trash can icon.
+The web application allows you to save tasks to be done in the near future on the board. For example, it could be words that need to be learned in another language.
+
+Short description of the program's functionality:
+
+Enter the content of the task into the "Dodaj nowe zadanie" field and confirm it with the "enter" key or click the "Dodaj zadanie" button.
+The green button, to the left of the task, allows you to mark the task as done.
+Each task can be removed from the board at any time, by clicking the trash can icon to the right of the task.
+By clicking on the content of the task, we go to the subpage containing the details of the task.
+The search engine allows you, to find tasks that contain a specific phrase.
+Completed tasks may be invisible - after pressing the "Ukryj ukończone".
+The "Ukończ wszystkie" button, marks all tasks as completed.
+At any time, you can download sample tasks, by clicking "Pobierz przykładowe zadania".
+The "o autorze" tab, contains information about the author of the project.
 
 ## Languages
  - HTML
@@ -21,6 +31,12 @@ Each of the tasks can be removed from the board at any time by clicking the tras
  - React Hooks: useState, useEffect, useRef, own Reaact Hooks
  - Redux
  - Styled components
+ - JS axios async/await function
+ - JS Generator
+ - Redux-Saga
+ - reading/writing data to localStorage
+ - React Router
+
 ## Available Scripts
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
