@@ -29,7 +29,7 @@ export const StyledActiveLink = styled(NavLink).attrs(()=>({
     color: white;
     text-decoration: none;
 
-    &${activeClassName}{
+    &.${activeClassName}{
         font-weight: bold;
     };
 

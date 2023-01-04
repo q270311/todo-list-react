@@ -30,8 +30,7 @@ const App = () => (
                 <Route path="/">
                     <Redirect to="/zadania" />
                 </Route>
-            </Switch>
-        
+            </Switch>        
     </HashRouter>
 );
 
