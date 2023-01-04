@@ -32,28 +32,28 @@ export const Content = styled.span`
 export const Button = styled.button`
     width: 30px;
     height: 30px;
-    color: white;
+    color: ${({ theme }) => theme.color.white};
     cursor: pointer;
     border: none;
 
     ${({ toggleDone }) => toggleDone && css`
-        background-color: hsl(120, 50%, 41%);
+        background-color: ${({ theme }) => theme.color.green};
 
         &:hover{
-            background-color: hsl(120, 36%, 47%);
+            filter: brightness(150%);
         }
     `};
 
     ${({ remove }) => remove && css`
-        background-color: rgb(199, 26, 26);
+        background-color: ${({ theme }) => theme.color.crimson} ;
 
         &:hover{
-            background-color: hsl(0, 49%, 50%);
+            filter: brightness(150%);
         }
     `};
 `;
 
 export const StyledLink = styled(Link)`
     text-decoration: none;
-    color: gray;
+    color: ${({ theme }) => theme.color.gray};
 `;

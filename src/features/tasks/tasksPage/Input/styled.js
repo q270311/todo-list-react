@@ -4,10 +4,9 @@ export const Input = styled.input`
     height: 40px;
     ${({ type }) => type === "text" && css`   
         
-        //margin-right: 20px;
-        border: 2px solid #dad5d5;
+        border: 2px solid ${({ theme }) => theme.color.lightGray};
 
-        @media (max-width: 767px) {    
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {    
             width: 100%;
             margin-bottom: 10px;
         }
@@ -16,18 +15,18 @@ export const Input = styled.input`
     ${({ type }) => type === "submit" && css`
         
         height: 40px;
-        background-color: teal;
+        background-color: ${({ theme }) => theme.color.teal};
         color: white;
-        border: 2px solid teal;
+        border: 2px solid ${({ theme }) => theme.color.teal};
         cursor: pointer;
 
         &:hover{
             transition: 1s;
             transform: scale(1.05);
-            background-color: rgb(41, 141, 141);
+            filter: brightness(150%);
         }
 
-        @media (max-width: 767px) {    
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {    
             width: 100%;
         }
     `};

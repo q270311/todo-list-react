@@ -6,7 +6,7 @@ export const StyledForm = styled.form`
     grid-template-columns: 1fr 20%;
     padding-top: 10px;
 
-    @media (max-width: 767px) {    
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {    
         display: flex;
         flex-direction: column;
     }

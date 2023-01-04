@@ -8,21 +8,21 @@ export const ButtonsContainer = styled.div`
 export const Button = styled.button`
     border: none;
     background-color: transparent;
-    color: gray;
+    color: ${({ theme }) => theme.color.gray};
     font-size: 17px;
     margin-left: 20px;
     cursor: pointer;
 
     ${({ disabled }) => disabled && css`
-        color: #cecccc;        
+        filter: brightness(130%);        
     `};
 
     &:hover{
         transition: color 1.5s;
-        color: #cecccc;
+        filter: brightness(130%);   
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         flex-basis: 100%;
         margin: 10px;        
     };
