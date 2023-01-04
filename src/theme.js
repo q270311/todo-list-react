@@ -5,6 +5,7 @@ export const theme = {
         green: "hsl(120, 50%, 41%)",     
         gray: "#707070",
         white: "white",
+        gallery: "#dfdcdc",
     },
     breakpoint: {
         mobileMax: 767,

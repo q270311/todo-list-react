@@ -4,7 +4,7 @@ import store from './store';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
 import { Provider } from 'react-redux';
-import './index.css';
+import { GlobalStyle } from './GlobalStyle';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -13,6 +13,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <App />
       </ThemeProvider>
     </Provider>
